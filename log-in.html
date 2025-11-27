@@ -37,7 +37,7 @@
                     <p>密码：<input type="password" name="password" id="password" class="password" placeholder="请输入密码"></p>
                 </div>
                 <div class="Login-submit">
-                    <input type="button" value="登录" class="Login-Button" onclick="window.location.href='index.html'">
+                    <input type="button" value="登录" class="Login-Button" onclick="checkLogin()">
                 </div>
             </div>
         </div>
@@ -46,5 +46,16 @@
         </div>
     </div>
     </div>
+    <script>
+        function checkLogin(){
+            const username = document.querySelector('.username').value.trim();
+            const password = document.querySelector('.password').value.trim();
+            if(username === 'pigeons2023' && password === '12345678'){
+                window.location.href='index.html';
+            }else{
+                alert("用户名或密码错误")
+            }
+        }
+    </script>
 </body>
 </html>

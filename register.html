@@ -22,7 +22,7 @@
                 </div>
                 <div class="Navigation">
                     <span id="span2"><a class="a2" href="/">首页</a></span>
-                    <span id="span3"><a class="a2" href="log-in.html">注册</a></span>
+                    <span id="span3"><a class="a2" href="log-in.html">登录</a></span>
                     <span id="span4"><a class="a2" href="register.html">注册</a></span>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                     <p>密码：<input type="password" name="password" id="password" class="password" placeholder="请输入密码"></p>
                 </div>
                 <div class="Register-submit">
-                    <input type="button" value="注册" class="Register-Button" onclick="window.location.href='index.html'">
+                    <input type="button" value="注册" class="Register-Button" onclick="checkRegister()">
                 </div>
             </div>
         </div>
@@ -46,5 +46,25 @@
         </div>
     </div>
     </div>
+    <script>
+        function checkRegister(){
+            const username = document.querySelector('.username').value.trim();
+            const password = document.querySelector('.password').value.trim();
+            let username_length = username.length;
+            let password_length = password.length;
+            if(username_length<=6){
+                alert("用户名过短")
+            }else if(password_length<=6){
+                alert("密码过短")
+            }else if(username_length>=12){
+                alert("用户名过长")
+            }else if(password_length>=18){
+                alert("密码过长")
+            }else{
+                alert("注册成功")
+                window.location.href='log-in.html'
+            }
+        }
+    </script>
 </body>
 </html>
