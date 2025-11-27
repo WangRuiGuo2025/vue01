@@ -6,11 +6,11 @@
     <div class="Introduction">
         <div class="Basic-Information">
             <h3 style="text-align: center;color: black;font-weight: bolder;">基础信息</h3>
-            <p class="p1"><b>姓名：</b>王瑞国</p>
-            <p class="p1"><b>性别：</b>男</p>
-            <p class="p1"><b>籍贯：</b>山东省邹城市</p>
-            <p class="p1"><b>专业班级：</b>智能2501</p>
-            <p class="p1"><b>学号：</b>25110570014</p>
+            <p class="p1"><span style="font-weight: bold;">姓名：</span>王瑞国</p>
+            <p class="p1"><span style="font-weight: bold;">性别：</span>男</p>
+            <p class="p1"><span style="font-weight: bold;">籍贯：</span>山东省邹城市</p>
+            <p class="p1"><span style="font-weight: bold;">专业班级：</span>智能2501</p>
+            <p class="p1"><span style="font-weight: bold;">学号：</span>25110570014</p>
         </div>
         <div class="Personal-Strengths">
             <h3 style="text-align: center;color: black;font-weight: bolder;">个人特长</h3>
@@ -34,7 +34,7 @@
 }
 
 .Basic-Information{
-  padding: 20px;
+  padding: 40px;
 }
 
 .Personal-Strengths {

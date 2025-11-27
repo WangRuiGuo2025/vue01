@@ -1,5 +1,17 @@
 <script setup>
     console.log("Headers.vue加载成功")
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    function search(){
+        const searchinput = document.querySelector('.search-input').value.trim();
+        if (searchinput === null || searchinput === '') {
+            alert('请输入搜索内容');
+        }else{
+            console.log("搜索内容:%s",searchinput);
+            sleep(600).then(()=>location.reload());
+        }
+    }
 </script>
 
 <template>
@@ -14,8 +26,8 @@
                 <span id="span4"><a class="a2" href="register.html">注册</a></span>
             </div>
             <div class="Search">
-                <input type="text" class="Search-input" placeholder="输入内容以查询">
-                <a class="a3" href="#"><img src="/src/img/search.png" alt="搜索" class="Search-Img"></a>
+                <input type="text" class="search-input" placeholder="输入内容以查询">
+                <a class="a3" @click="search()"><img src="/src/img/search.png" alt="搜索" class="Search-Img"></a>
             </div>
 
         </div>
@@ -41,9 +53,10 @@
     width: 100%;
 }
 
-.Search-input{
+.search-input{
     width: 150px;
     height: 30px;
+    padding: 5px;
     border-radius: 20px;
     text-align: center;
 }
