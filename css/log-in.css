@@ -55,6 +55,28 @@
     margin-bottom: 25px;
 }
 
+.Time{
+    border-radius: 20px;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.Time-Contents{
+    background-color: rgba(241, 241, 241, 0.8);
+    width: 350px;
+    height: 25px;
+    border-radius: 20px;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+#txt{
+    font-weight: bold;
+}
+
 .Top-Contents{
     margin-left: 20px;
     margin-right: 20px;

@@ -7,9 +7,37 @@
     <link rel="stylesheet" href="/css/log-in.css">
     <script>
         console.log("log-in.html加载成功")
+        function checkLogin(){
+            const username = document.querySelector('.username').value.trim();
+            const password = document.querySelector('.password').value.trim();
+            if(username === 'pigeons2023' && password === '12345678'){
+                window.location.href='index.html';
+            }else{
+                alert("用户名或密码错误")
+            }
+        }
+        function startTime(){
+            var today = new Date();
+            var y = today.getFullYear();
+            var month = today.getMonth();
+            var day = today.getDate();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = time(m);
+            s = time(s);
+            document.getElementById('txt').innerHTML=y+"年"+month+"月"+day+"日"+h+":"+m+":"+s;
+            t=setTimeout(function(){startTime()},500);
+        }
+        function time(i){
+            if(i<10){
+                i="0"+1;
+            }
+            return i;
+        }
     </script>
 </head>
-<body>
+<body onload="startTime()">
     <div class="curtain-container">
         <div class="left-curtain"></div>
         <div class="right-curtain"></div>
@@ -25,6 +53,11 @@
                     <span id="span3"><a class="a2" href="log-in.html">登录</a></span>
                     <span id="span4"><a class="a2" href="register.html">注册</a></span>
                 </div>
+            </div>
+        </div>
+        <div class="Time">
+            <div class="Time-Contents">
+                <div id="txt"></div>
             </div>
         </div>
         <div class="body">
@@ -45,17 +78,4 @@
             <footer>2025 · 王瑞国的小站</footer>
         </div>
     </div>
-    </div>
-    <script>
-        function checkLogin(){
-            const username = document.querySelector('.username').value.trim();
-            const password = document.querySelector('.password').value.trim();
-            if(username === 'pigeons2023' && password === '12345678'){
-                window.location.href='index.html';
-            }else{
-                alert("用户名或密码错误")
-            }
-        }
-    </script>
-</body>
 </html>
