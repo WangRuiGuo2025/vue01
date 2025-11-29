@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/log-in.css">
     <script>
         console.log("log-in.html加载成功")
+
         function checkLogin(){
             const username = document.querySelector('.username').value.trim();
             const password = document.querySelector('.password').value.trim();
@@ -16,6 +17,15 @@
                 alert("用户名或密码错误")
             }
         }
+
+        document.addEventListener("DOMContentLoaded",function(){
+            document.addEventListener("keydown",function(e){
+                if(e.key==='Enter'){
+                    checkLogin();
+                }
+            })
+        })
+
         function startTime(){
             var today = new Date();
             var y = today.getFullYear();
@@ -29,6 +39,7 @@
             document.getElementById('txt').innerHTML=y+"年"+month+"月"+day+"日"+h+":"+m+":"+s;
             t=setTimeout(function(){startTime()},500);
         }
+        
         function time(i){
             if(i<10){
                 i="0"+1;

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/register.css">
     <script>
         console.log("register.html加载成功")
+
         function checkRegister(){
             const username = document.querySelector('.username').value.trim();
             const password = document.querySelector('.password').value.trim();
@@ -25,6 +26,15 @@
                 window.location.href='log-in.html'
             }
         }
+
+        document.addEventListener("DOMContentLoaded",function(){
+            document.addEventListener("keydown",function(e){
+                if(e.key==='Enter'){
+                    checkRegister();
+                }
+            })
+        })
+
         function startTime(){
             var today = new Date();
             var y = today.getFullYear();
@@ -38,6 +48,7 @@
             document.getElementById('txt').innerHTML=y+"年"+month+"月"+day+"日"+h+":"+m+":"+s;
             t=setTimeout(function(){startTime()},500);
         }
+        
         function time(i){
             if(i<10){
                 i="0"+1;

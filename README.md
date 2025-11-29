@@ -1,7 +1,23 @@
-# 利用VUE实现个人主页呈现
+# 王瑞国的小站
 
-### 学习利用了CSS、JS基础语法
+## 技术栈
 
-### 自学部分Vue知识，写出符合Vue语法的函数
+- **前端框架**: Vue 3
+- **构建工具**: Vite
+- **编程语言**: JavaScript
+- **样式**: CSS
+- **开发工具**: Visual Studio Code
 
-### 将原有HTML拆分成若干Vue文件，并实现展示
+## 功能介绍
+
+### 组件说明
+- **Curtain**: 窗帘效果
+- **Headers**: 导航组件
+- **Introduction**: 介绍组件
+- **ContactUs**: 联系方式组件
+- **Hitokoto**: 一言组件
+- **WebCollection**: 收藏网页组件
+- **Footers**: 页脚组件
+
+### 其他功能
+- 嵌入网易云音乐播放器
